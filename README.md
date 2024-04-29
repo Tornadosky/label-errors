@@ -1,4 +1,13 @@
+# Getting started
 
+### Method 2 for training model with EPL and EFL
+
+In `method-2.ipynb` you can find the code to train a model which takes image and labels and returns for each label whether it is erroneous label or not. Currently without real errors, just to test that model works. Training takes ~1.5 hour for 1 epoch on a gpu. Could be modified in a more efficient way.
+
+The input for the model looks like this:
+`(image, one of the labels in that image)`
+and output:
+`1 or 0`
 
 # Project Roadmap
 
