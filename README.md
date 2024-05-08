@@ -1,5 +1,9 @@
 # Getting started
 
+### How to use error creation script
+
+All information is provided on [wiki](https://mygit.th-deg.de/it28925/deep-learning/-/wikis/How-to-use-add_errors_script.py).
+
 ### Method 2 for training model with EPL and EFL
 
 In `method-2.ipynb` you can find the code to train a model which takes image and labels and returns for each label whether it is erroneous label or not. Currently without real errors, just to test that model works. Training takes ~1.5 hour for 1 epoch on a gpu. Could be modified in a more efficient way.
