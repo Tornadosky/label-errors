@@ -288,7 +288,7 @@ def shift_bounding_boxes_in_dataset(dataset, fraction=0.1, min_area=400,
 
 
 if __name__ == "__main__":
-    json_labels = "bdd100k_labels_images_val.json"
+    json_labels = "det_val.json"
 
     # Define the dataset
     with open(json_labels, 'r') as file:
@@ -320,13 +320,13 @@ if __name__ == "__main__":
         )
     error_ids_dict["shifting_err"] = shift_bounding_boxes_in_dataset(
         dataset=error_dataset,
-        fraction=0.07,
+        fraction=0.15,
         min_area=400, # minimum area of the bounding box to include a label for potential modification
         min_factor=0.15, # percentage of the bounding box dimensions to shift 
         max_factor=0.2
         )
     error_ids_dict["misclassification_err"] = misclassificate_labels_in_dataset(
-        dataset=error_dataset, categories=categories, fraction=0.2,
+        dataset=error_dataset, categories=categories, fraction=0.07,
     )
 
     # Save the modified label id's and dataset
